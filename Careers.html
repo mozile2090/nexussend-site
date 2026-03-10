@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased selection:bg-indigo-500 selection:text-white scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | NexusSend</title>
+    
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] }, colors: { background: '#030712' } } }
+        }
+    </script>
+    <style>
+        body { background-color: #030712; color: #f9fafb; } 
+        .glass-nav { background: rgba(3, 7, 18, 0.7); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+    </style>
+</head>
+<body class="relative">
+    
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-20">
+            <a href="/index.html" class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+                    <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <span class="font-bold text-white text-xl tracking-tight">Nexus<span class="text-indigo-400">Send</span></span>
+            </a>
+            <a href="/index.html" class="text-sm font-medium text-gray-400 hover:text-white transition">&larr; Back to Home</a>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-24 px-6 lg:px-8 max-w-4xl mx-auto">
+        <h1 class="text-4xl font-extrabold text-white mb-4">Join the Nexus</h1>
+        <p class="text-xl text-gray-400 mb-12 border-b border-white/10 pb-8">Help us build the next generation of protocol infrastructure.</p>
+        
+        <div class="space-y-6">
+            <div class="bg-gray-900 border border-white/5 p-6 rounded-xl flex flex-col sm:flex-row justify-between sm:items-center gap-4 hover:border-indigo-500/50 transition shadow-lg">
+                <div>
+                    <h3 class="text-white font-bold text-lg">Senior C++ Systems Engineer</h3>
+                    <p class="text-gray-500 text-sm mt-1">Remote • Full-time • Infrastructure</p>
+                </div>
+                <button class="bg-white/10 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-white/20 transition w-full sm:w-auto">Apply</button>
+            </div>
+
+            <div class="bg-gray-900 border border-white/5 p-6 rounded-xl flex flex-col sm:flex-row justify-between sm:items-center gap-4 hover:border-indigo-500/50 transition shadow-lg">
+                <div>
+                    <h3 class="text-white font-bold text-lg">Node.js API Developer</h3>
+                    <p class="text-gray-500 text-sm mt-1">Remote • Full-time • Core API</p>
+                </div>
+                <button class="bg-white/10 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-white/20 transition w-full sm:w-auto">Apply</button>
+            </div>
+
+            <div class="bg-gray-900 border border-white/5 p-6 rounded-xl flex flex-col sm:flex-row justify-between sm:items-center gap-4 hover:border-indigo-500/50 transition shadow-lg">
+                <div>
+                    <h3 class="text-white font-bold text-lg">DevOps & Proxy Rotation Specialist</h3>
+                    <p class="text-gray-500 text-sm mt-1">Remote • Contract • Networks</p>
+                </div>
+                <button class="bg-white/10 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-white/20 transition w-full sm:w-auto">Apply</button>
+            </div>
+        </div>
+        
+        <div class="mt-16 bg-indigo-900/10 border border-indigo-500/20 p-8 rounded-2xl text-center">
+            <h3 class="text-white font-bold mb-2">Don't see a fit?</h3>
+            <p class="text-gray-400 text-sm mb-6">We are always looking for talented engineers who understand browser automation, proxy networks, and API orchestration.</p>
+            <a href="/Contact.html" class="inline-block border border-gray-600 hover:bg-gray-800 text-white px-6 py-2 rounded-lg transition text-sm">Send Open Application</a>
+        </div>
+    </main>
+
+</body>
+</html>
