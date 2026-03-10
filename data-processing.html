@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased selection:bg-indigo-500 selection:text-white scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Processing | NexusSend</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>body{background-color:#030712;} .glass-nav{background:rgba(3,7,18,0.7);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.05);}</style>
+</head>
+<body>
+    <nav class="fixed w-full z-50 glass-nav"><div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-20"><a href="/index.html" class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center"><svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><span class="font-bold text-white text-xl">Nexus<span class="text-indigo-400">Send</span></span></a><a href="/index.html" class="text-sm text-gray-400 hover:text-white">&larr; Back</a></div></nav>
+
+    <main class="pt-32 pb-24 px-6 lg:px-8 max-w-3xl mx-auto text-gray-300">
+        <h1 class="text-4xl font-extrabold text-white mb-8 border-b border-white/10 pb-6">Data Processing Agreement</h1>
+        <p class="mb-6">This DPA supplements the Terms of Service regarding the processing of personal data.</p>
+        <h2 class="text-xl font-bold text-white mt-8 mb-4">Ephemeral Processing Guarantee</h2>
+        <p class="mb-4">NexusSend acts as a data processor for the payloads you transmit through our routing APIs. We process data entirely in memory (RAM). Payload obfuscation and routing are executed instantly without writing plain-text email content to disk.</p>
+        <h2 class="text-xl font-bold text-white mt-8 mb-4">OAuth Credential Security</h2>
+        <p class="mb-4">Google API tokens are encrypted at rest using AES-256. They are only decrypted momentarily by our core queue workers when executing an authorized transmission.</p>
+    </main>
+</body>
+</html>

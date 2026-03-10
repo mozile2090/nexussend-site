@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>API Reference | NexusSend</title><script src="https://cdn.tailwindcss.com"></script>
+    <style>body{background-color:#030712;color:#f9fafb;}</style>
+</head>
+<body class="p-10 max-w-4xl mx-auto">
+    <a href="/index.html" class="text-indigo-400 hover:text-white mb-8 block">&larr; Back to Home</a>
+    <h1 class="text-4xl font-extrabold text-white mb-6">API Reference Guides</h1>
+    <p class="text-gray-400 mb-8">Client library initialization parameters.</p>
+    
+    <div class="space-y-6">
+        <div class="bg-gray-900 border border-gray-800 p-6 rounded-lg">
+            <h3 class="text-white font-bold mb-4">Node.js Client</h3>
+            <div class="bg-black p-4 rounded text-sm font-mono text-blue-300">
+                const client = new NexusClient({<br>
+                &nbsp;&nbsp;apiKey: 'sk_live_...',<br>
+                &nbsp;&nbsp;oauthProvider: 'google',<br>
+                &nbsp;&nbsp;headlessBypass: true<br>
+                });
+            </div>
+        </div>
+        <div class="bg-gray-900 border border-gray-800 p-6 rounded-lg">
+            <h3 class="text-white font-bold mb-4">Python Client</h3>
+            <div class="bg-black p-4 rounded text-sm font-mono text-yellow-200">
+                engine = RoutingEngine(<br>
+                &nbsp;&nbsp;api_key="sk_live_...",<br>
+                &nbsp;&nbsp;proxy_rotation=True,<br>
+                &nbsp;&nbsp;timeout=30<br>
+                )
+            </div>
+        </div>
+    </div>
+</body>
+</html>

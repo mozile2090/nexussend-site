@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased selection:bg-indigo-500 selection:text-white scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | NexusSend</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['Fira Code', 'monospace'] },
+                    colors: { background: '#030712', surface: '#0f172a' },
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #030712; color: #f9fafb; }
+        .glass-nav { background: rgba(3, 7, 18, 0.7); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .prose h2 { color: #ffffff; font-weight: 700; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; }
+        .prose p { color: #9ca3af; margin-bottom: 1.25rem; line-height: 1.75; }
+    </style>
+</head>
+<body class="relative">
+
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="/index.html" class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+                        <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <span class="font-bold text-white text-xl tracking-tight">Nexus<span class="text-indigo-400">Send</span></span>
+                </a>
+                <div class="flex items-center gap-4">
+                    <a href="/index.html" class="text-sm font-medium text-gray-400 hover:text-white transition">&larr; Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-24 px-6 lg:px-8 max-w-4xl mx-auto">
+        <div class="mb-12 border-b border-white/10 pb-8">
+            <h1 class="text-4xl font-extrabold text-white mb-4">Terms of Service</h1>
+            <p class="text-gray-400">Effective Date: March 10, 2026</p>
+        </div>
+
+        <div class="prose max-w-none">
+            <h2>1. Acceptance of Terms</h2>
+            <p>By registering for an account, authorizing OAuth connections, or deploying our API/SDKs, you agree to be bound by these Terms of Service. If you do not agree, do not use the NexusSend infrastructure.</p>
+
+            <h2>2. Service Description</h2>
+            <p>NexusSend provides advanced API orchestration, proxy routing, and automation queues designed to facilitate high-volume communication flows. We provide the infrastructure; you are solely responsible for the payloads you transmit.</p>
+
+            <h2>3. Acceptable Use Policy</h2>
+            <p>You agree not to use NexusSend for unlawful purposes. You are strictly prohibited from utilizing our infrastructure to distribute malicious software, conduct phishing operations, or violate the terms of service of the underlying APIs (e.g., Google, Microsoft) that you connect to our engine.</p>
+
+            <h2>4. API Limits and Fair Use</h2>
+            <p>While NexusSend is engineered to optimize throughput, usage is subject to the tier limits defined in your billing plan. We reserve the right to throttle or suspend accounts that generate anomalous traffic spikes detrimental to our shared server stability.</p>
+
+            <h2>5. Intellectual Property</h2>
+            <p>The code, architecture, and design of the NexusSend platform are the exclusive property of NexusSend Technologies Inc. Our client libraries are distributed under an open-source license where specified, but the core engine remains proprietary.</p>
+
+            <h2>6. Limitation of Liability</h2>
+            <p>To the maximum extent permitted by law, NexusSend shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or goodwill, arising from your use of the API, account suspension, or any third-party API rate-limiting.</p>
+        </div>
+    </main>
+
+    <footer class="border-t border-white/10 bg-[#030712] py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-gray-600 text-sm">&copy; 2026 NexusSend Technologies Inc. All rights reserved.</div>
+            <div class="flex space-x-6 text-sm font-medium">
+                <a href="/privacy.html" class="text-gray-500 hover:text-white transition">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

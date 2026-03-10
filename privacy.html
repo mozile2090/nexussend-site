@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased selection:bg-indigo-500 selection:text-white scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | NexusSend</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['Fira Code', 'monospace'] },
+                    colors: { background: '#030712', surface: '#0f172a' },
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #030712; color: #f9fafb; }
+        .glass-nav { background: rgba(3, 7, 18, 0.7); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .prose h2 { color: #ffffff; font-weight: 700; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; }
+        .prose p { color: #9ca3af; margin-bottom: 1.25rem; line-height: 1.75; }
+        .prose ul { color: #9ca3af; margin-bottom: 1.25rem; list-style-type: disc; padding-left: 1.5rem; }
+        .prose li { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body class="relative">
+
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="/index.html" class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+                        <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <span class="font-bold text-white text-xl tracking-tight">Nexus<span class="text-indigo-400">Send</span></span>
+                </a>
+                <div class="flex items-center gap-4">
+                    <a href="/index.html" class="text-sm font-medium text-gray-400 hover:text-white transition">&larr; Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-24 px-6 lg:px-8 max-w-4xl mx-auto">
+        <div class="mb-12 border-b border-white/10 pb-8">
+            <h1 class="text-4xl font-extrabold text-white mb-4">Privacy Policy</h1>
+            <p class="text-gray-400">Effective Date: March 10, 2026</p>
+        </div>
+
+        <div class="prose max-w-none">
+            <h2>1. Introduction</h2>
+            <p>Welcome to NexusSend. This Privacy Policy governs your use of our programmatic routing API, SDKs (including Node.js, Python, and C++ environments), and headless browser automation infrastructure. We respect your privacy and are committed to protecting the sensitive credentials and data routed through our systems.</p>
+
+            <h2>2. Information We Collect</h2>
+            <p>To provide our high-volume routing and automation services, we require specific OAuth tokens and identifiers. When you authenticate via our Google OAuth integration, we collect:</p>
+            <ul>
+                <li>Your email address and basic profile information.</li>
+                <li>OAuth 2.0 access and refresh tokens required to interact with requested APIs (e.g., Gmail API).</li>
+                <li>System telemetry, routing logs, and proxy configuration metadata.</li>
+            </ul>
+
+            <h2 id="google-limited-use" class="text-indigo-400">3. Google API Services User Data Policy Compliance</h2>
+            <div class="bg-indigo-900/20 border border-indigo-500/30 rounded-xl p-6 my-6 shadow-lg shadow-indigo-500/10">
+                <p class="text-white font-medium mb-0">
+                    NexusSend's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" class="text-indigo-400 hover:underline" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements.
+                </p>
+            </div>
+            <p>We explicitly guarantee that your OAuth tokens and mailbox data are utilized strictly for the execution of the automation queues you configure. We do not sell, rent, or repurpose Google user data for advertising or any external data-brokering.</p>
+
+            <h2>4. Data Storage and Security</h2>
+            <p>All sensitive credentials, including OAuth tokens, are encrypted at rest using industry-standard AES-256 encryption. Our infrastructure relies on ephemeral processing; email contents are processed in memory during routing and are not permanently retained on NexusSend servers once delivery is confirmed by the target API.</p>
+
+            <h2>5. Third-Party Services</h2>
+            <p>We may share operational data with trusted third-party proxy networks or datacenter providers solely to facilitate the core routing functionality of NexusSend. These providers are bound by strict confidentiality agreements and cannot access decrypted payload data.</p>
+
+            <h2>6. Contact Us</h2>
+            <p>If you have questions regarding this Privacy Policy or need to revoke your OAuth tokens, please contact our security team at legal@nexussend.xyz or use the Google Account permissions dashboard to revoke access directly.</p>
+        </div>
+    </main>
+
+    <footer class="border-t border-white/10 bg-[#030712] py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-gray-600 text-sm">&copy; 2026 NexusSend Technologies Inc. All rights reserved.</div>
+            <div class="flex space-x-6 text-sm font-medium">
+                <a href="/terms.html" class="text-gray-500 hover:text-white transition">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

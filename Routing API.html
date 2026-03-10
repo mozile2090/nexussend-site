@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Routing API | NexusSend</title><script src="https://cdn.tailwindcss.com"></script>
+    <style>body{background-color:#030712;color:#f9fafb;}</style>
+</head>
+<body class="p-10 max-w-4xl mx-auto">
+    <a href="/index.html" class="text-indigo-400 hover:text-white mb-8 block">&larr; Back to Home</a>
+    <h1 class="text-4xl font-extrabold text-white mb-6">Routing API Overview</h1>
+    <p class="text-gray-400 mb-8">Direct REST access to the NexusSend queue.</p>
+    <div class="bg-gray-900 border border-gray-800 p-6 rounded-lg mb-6">
+        <h3 class="text-white font-bold mb-2">POST /v2/route/dispatch</h3>
+        <p class="text-sm text-gray-400 mb-4">Injects a new payload into the processing queue utilizing OAuth credentials.</p>
+        <div class="bg-black p-4 rounded text-sm font-mono text-green-400">
+            {<br>
+            &nbsp;&nbsp;"client_id": "oauth_client_id",<br>
+            &nbsp;&nbsp;"payload_data": "base64url_encoded_string",<br>
+            &nbsp;&nbsp;"proxy_tier": "residential"<br>
+            }
+        </div>
+    </div>
+</body>
+</html>

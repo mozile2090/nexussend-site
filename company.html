@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased selection:bg-indigo-500 selection:text-white scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company & Legal | NexusSend</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] }, colors: { background: '#030712' } } } }
+    </script>
+    <style>body { background-color: #030712; color: #f9fafb; } .glass-nav { background: rgba(3, 7, 18, 0.7); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,0.05); } section { scroll-margin-top: 100px; padding-bottom: 3rem; } .prose h2 { color: #ffffff; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; } .prose p { color: #9ca3af; margin-bottom: 1rem; line-height: 1.7; }</style>
+</head>
+<body class="relative">
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-20">
+            <a href="/index.html" class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center"><svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+                <span class="font-bold text-white text-xl tracking-tight">Nexus<span class="text-indigo-400">Send</span></span>
+            </a>
+            <a href="/index.html" class="text-sm font-medium text-gray-400 hover:text-white transition">&larr; Back to Home</a>
+        </div>
+    </nav>
+
+    <div class="pt-28 pb-24 px-6 lg:px-8 max-w-7xl mx-auto flex gap-12">
+        <aside class="w-64 hidden lg:block flex-shrink-0">
+            <div class="sticky top-32 space-y-8">
+                <div>
+                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#about" class="hover:text-white transition">About</a></li>
+                        <li><a href="#careers" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="#blog" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="#changelog" class="hover:text-white transition">Changelog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">Legal & Support</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#data-processing" class="hover:text-white transition">Data Processing</a></li>
+                        <li><a href="#cookie-policy" class="hover:text-white transition">Cookie Policy</a></li>
+                        <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <main class="flex-1 max-w-3xl prose max-w-none">
+            <h1 class="text-4xl font-extrabold text-white mb-10 border-b border-white/10 pb-6 not-prose">Company & Legal Information</h1>
+
+            <section id="about">
+                <h2>About Us</h2>
+                <p>NexusSend is built by a team of systems engineers dedicated to solving infrastructure bottlenecks in high-volume programmatic communication. We specialize in API orchestration, headless browser automation, and secure OAuth credential handling.</p>
+            </section>
+
+            <section id="careers">
+                <h2>Careers</h2>
+                <p>We are a small, dedicated engineering team. We are currently not expanding our core infrastructure team, but we occasionally open contract roles for C++ systems optimization.</p>
+            </section>
+
+            <section id="blog">
+                <h2>Blog</h2>
+                <p>Technical updates, architecture breakdowns, and our approach to bypassing protocol restrictions are published directly to our GitHub organization repository and engineering readmes.</p>
+            </section>
+
+            <section id="changelog">
+                <h2>Changelog</h2>
+                <p><strong>v2.0 (March 2026):</strong> Rolled out fully automated OAuth consent screen bridging and enhanced proxy rotation arrays. <br>
+                <strong>v1.5:</strong> Introduced headless browser fallback for aggressive rate-limiting environments.</p>
+            </section>
+
+            <section id="data-processing">
+                <h2>Data Processing Agreement (DPA)</h2>
+                <p>We process data entirely in memory. Payload obfuscation and routing are executed without writing plain-text content to disk, ensuring compliance with global data protection standards.</p>
+            </section>
+
+            <section id="cookie-policy">
+                <h2>Cookie Policy</h2>
+                <p>NexusSend uses strictly necessary session cookies for dashboard authentication and load-balancing our proxy networks. We do not use third-party tracking or advertising cookies on our platform.</p>
+            </section>
+
+            <section id="contact">
+                <h2>Contact & Support</h2>
+                <p>For enterprise inquiries, custom SLA agreements, or infrastructure support, please contact <strong>support@nexussend.xyz</strong>.</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+

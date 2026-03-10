@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased selection:bg-indigo-500 selection:text-white scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Blog | NexusSend</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>body{background-color:#030712;color:#f9fafb;} .glass-nav{background:rgba(3,7,18,0.7);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.05);}</style>
+</head>
+<body>
+    <nav class="fixed w-full z-50 glass-nav"><div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-20"><a href="/index.html" class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center"><svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><span class="font-bold text-white text-xl">Nexus<span class="text-indigo-400">Send</span></span></a><a href="/index.html" class="text-sm text-gray-400 hover:text-white">&larr; Back to Home</a></div></nav>
+
+    <main class="pt-32 pb-24 px-6 lg:px-8 max-w-4xl mx-auto">
+        <h1 class="text-4xl font-extrabold text-white mb-12 border-b border-white/10 pb-6">Engineering Blog</h1>
+        
+        <div class="space-y-16">
+            <article class="bg-gray-900 border border-white/5 rounded-2xl p-8 hover:border-indigo-500/30 transition shadow-lg">
+                <p class="text-indigo-400 text-sm font-bold mb-2">March 08, 2026 • Infrastructure</p>
+                <h2 class="text-2xl font-bold text-white mb-4">Scaling Headless Automation: Puppeteer vs. Playwright</h2>
+                <div class="text-gray-400 space-y-4 text-sm leading-relaxed">
+                    <p>When bypassing traditional SMTP limits, relying strictly on standard API endpoints often leads to aggressive rate-limiting. To solve this, our v2.0 routing engine leverages headless browser automation to simulate legitimate webmail interface sessions.</p>
+                    <p>Initially, we deployed Puppeteer for our Node.js automation nodes. However, as our queues scaled past 1 million daily requests, memory leaks in Chromium instances caused worker node crashes. We recently migrated our core engine to Playwright. Playwright's persistent context management and native support for modifying HTTP headers on the fly allowed us to drastically reduce CPU overhead while easily injecting custom user-agent strings.</p>
+                    <div class="bg-black border border-gray-800 p-4 rounded-lg font-mono text-xs text-green-400 mt-4 mb-4">
+                        const context = await browser.newContext({ userAgent: customUA, proxy: { server: proxyUrl } });<br>
+                        const page = await context.newPage();<br>
+                        await page.goto('https://mail.google.com');
+                    </div>
+                    <p>By pairing Playwright with our automated OAuth token refresh cycles, we achieved a 99.9% success rate in programmatic routing without triggering security flags.</p>
+                </div>
+            </article>
+
+            <article class="bg-gray-900 border border-white/5 rounded-2xl p-8 hover:border-indigo-500/30 transition shadow-lg">
+                <p class="text-indigo-400 text-sm font-bold mb-2">February 22, 2026 • Security & Networking</p>
+                <h2 class="text-2xl font-bold text-white mb-4">Managing IP Reputation with PyProxy and Python Data Pipelines</h2>
+                <div class="text-gray-400 space-y-4 text-sm leading-relaxed">
+                    <p>A crucial component of secure routing is origin obfuscation. If 10,000 API calls originate from a single datacenter IP, connection throttling is imminent. We needed a robust way to ingest, format, and rotate residential proxies dynamically.</p>
+                    <p>We built a dedicated Python microservice to handle proxy rotation. Using lists sourced from pyproxy.io, our Python scripts validate latency and format the IP:PORT:USER:PASS strings into an internal Redis database. The C++ workers then pull these clean proxies instantly before establishing an OAuth connection.</p>
+                    <p>Formatting the raw data correctly was half the battle, but separating the proxy rotation logic into a standalone Python service decoupled our network layer from our core routing engine perfectly.</p>
+                </div>
+            </article>
+
+            <article class="bg-gray-900 border border-white/5 rounded-2xl p-8 hover:border-indigo-500/30 transition shadow-lg">
+                <p class="text-indigo-400 text-sm font-bold mb-2">January 15, 2026 • Internal Tools</p>
+                <h2 class="text-2xl font-bold text-white mb-4">Building Internal Network Monitoring GUIs with C++ and Qt6</h2>
+                <div class="text-gray-400 space-y-4 text-sm leading-relaxed">
+                    <p>While our clients interact with NexusSend via our web dashboard or API, our core infrastructure engineers need real-time, low-latency visibility into the C++ worker nodes. Web-based dashboards simply couldn't render the telemetry fast enough without significant lag.</p>
+                    <p>To solve this, we built our internal "NexusControl" application using C++ and the Qt6 framework. Qt6 allowed us to build a lightning-fast, cross-platform GUI that hooks directly into our memory management layer. We use Qt WebSockets to stream live OAuth consent statuses and queue backlogs natively into a highly customized, dark-mode desktop application.</p>
+                </div>
+            </article>
+
+            <article class="bg-gray-900 border border-white/5 rounded-2xl p-8 hover:border-indigo-500/30 transition shadow-lg">
+                <p class="text-indigo-400 text-sm font-bold mb-2">December 10, 2025 • Core API</p>
+                <h2 class="text-2xl font-bold text-white mb-4">Mastering the Gmail API: OAuth Flows and EML Obfuscation</h2>
+                <div class="text-gray-400 space-y-4 text-sm leading-relaxed">
+                    <p>Integrating the Gmail API using restricted scopes requires strict compliance and secure token management. When a user authenticates, our system captures the authorization code and exchanges it for access and refresh tokens via a secure server-to-server POST request.</p>
+                    <p>However, simply routing standard payloads through the API isn't enough for advanced use cases. We developed an EML obfuscation engine that dynamically modifies email subjects and bodies using zero-font techniques and smart spintax before encoding the final raw base64url string. This ensures maximum deliverability and dynamic payload uniqueness across massive broadcast queues.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+</body>
+</html>
