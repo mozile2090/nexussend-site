@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Dashboard | NexusSend</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #030712; color: #f9fafb; font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <nav class="p-6 flex justify-between items-center border-b border-white/5">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center">
+                <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <span class="font-bold text-xl tracking-tight">NexusSend</span>
+        </div>
+        <div class="flex items-center gap-4">
+            <span class="text-xs bg-green-500/10 text-green-400 px-3 py-1 rounded-full border border-green-500/20 font-medium">System Operational</span>
+            <div class="w-8 h-8 rounded-full bg-gray-800 border border-white/10"></div>
+        </div>
+    </nav>
+
+    <main class="flex-grow p-8 max-w-6xl mx-auto w-full">
+        <header class="mb-10">
+            <h1 class="text-3xl font-bold mb-2">Welcome back, Developer</h1>
+            <p class="text-gray-400">Your Google Account is successfully linked to the NexusSend Infrastructure.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass p-6 rounded-2xl">
+                <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Auth Status</h3>
+                <div class="flex items-center gap-3 text-green-400">
+                    <div class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
+                    <span class="font-medium">Active (Gmail API)</span>
+                </div>
+                <p class="mt-4 text-xs text-gray-500">Token expires in 3599s. Refreshing automatically.</p>
+            </div>
+
+            <div class="glass p-6 rounded-2xl">
+                <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">API Endpoints</h3>
+                <code class="text-xs text-indigo-400 block bg-black/40 p-2 rounded mb-2">POST /api/v1/route</code>
+                <code class="text-xs text-indigo-400 block bg-black/40 p-2 rounded">GET /api/v1/status</code>
+            </div>
+
+            <div class="glass p-6 rounded-2xl">
+                <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Instance Secret</h3>
+                <div class="flex items-center justify-between bg-black/40 p-2 rounded">
+                    <span class="text-xs font-mono text-gray-400">••••••••••••••••</span>
+                    <button class="text-xs text-indigo-400 font-bold uppercase">Show</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12 glass p-8 rounded-3xl text-center">
+            <h2 class="text-xl font-bold mb-4">Ready to start routing?</h2>
+            <p class="text-gray-400 mb-6 max-w-md mx-auto text-sm">Use your unique Client ID to authorize your local C++ or Node.js workers. All traffic is now routed through your verified Gmail instance.</p>
+            <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-xl font-semibold transition-all shadow-lg shadow-indigo-500/20">
+                View API Documentation
+            </button>
+        </div>
+    </main>
+
+    <footer class="p-8 text-center text-gray-600 text-xs border-t border-white/5">
+        &copy; 2026 NexusSend Infrastructure. Built for Scale.
+    </footer>
+</body>
+</html>
